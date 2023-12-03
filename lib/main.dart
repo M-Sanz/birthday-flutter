@@ -30,29 +30,31 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.pinkAccent,
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const Text(
-              "HALOOO GUYSSS SELAMAT ULANG TAHUN",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-                fontSize: 24.0,
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const Text(
+                "HALOOO GUYSSS SELAMAT ULANG TAHUN",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  fontSize: 24.0,
+                ),
               ),
-            ),
-            const SizedBox(height: 20),
-            Container(
-              width: screenWidth * containerWidthPercentage,
-              padding: const EdgeInsets.all(16.0),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10.0),
+              const SizedBox(height: 20),
+              Container(
+                width: screenWidth * containerWidthPercentage,
+                padding: const EdgeInsets.all(16.0),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                child: const FormExample(),
               ),
-              child: const FormExample(),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
